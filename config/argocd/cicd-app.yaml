@@ -6,7 +6,7 @@ metadata:
   namespace: openshift-gitops
 spec:
   destination:
-    namespace: dev-cicd
+    namespace: cicd
     server: https://kubernetes.default.svc
   ignoreDifferences:
   - group: argoproj.io
@@ -35,7 +35,7 @@ spec:
     kind: SealedSecret
   project: default
   source:
-    path: config/dev-cicd/overlays
+    path: config/cicd/overlays
     repoURL: https://github.com/bazhang87/gitops.git
   syncPolicy:
     automated:
